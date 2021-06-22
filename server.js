@@ -15,7 +15,7 @@ const config = require('./config.json'),
 
 
 hbs.registerPartials(path.join(__dirname, 'views/partials'));
-app.use(express.static('public'));
+app.use(express.static('dist'));
 app.set('view engine', 'hbs');
 
 db.connect(function (err) {

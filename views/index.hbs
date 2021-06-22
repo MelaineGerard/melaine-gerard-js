@@ -1,33 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta name="viewport" content="width=device-width"/>
-    <title>
-        {{subject}}
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melaine Gérard</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-<div>
-    {{>_nav}}
-    <header>
-        <h2>Welcome</h2>
-        <p>Here is the homepage for {{name}}
-        </p>
-        <div>
-            {{{content}}}
-        </div>
-    </header>
-    <section>
-        <h2>Here is the body</h2>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
-            repellendus!
-        </p>
-    </section>
-    <footer>
-        <h2>Here is the footer</h2>
-        <p><a href="{{link}}">Unsubscribe</a></p>
-    </footer>
+<body class="main">
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Compétences</a></li>
+            <li><a href="#">Stages</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="content">
+    <img src="/images/moi.png" alt="">
+    <p class="bold">Melaine Gérard</p>
+    <p class="light">Développeur</p>
+    <div class="socials">
+        <ul class="social-list">
+            <li><a href="https://github.com/MelaineGerard"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/melaine-gerard/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="mailto:pro@melaine-gerard.fr"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </div>
 </div>
+<script src="/js/index.js"></script>
 </body>
 </html>
