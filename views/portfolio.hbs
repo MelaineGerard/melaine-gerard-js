@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melaine Gérard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="main">
+<header>
+    {{>_nav}}
+</header>
+<div class="content m-4">
+    <h1 class="mb-4">Projets personnels</h1>
+    <div class="projects">
+        {{#each projects}}
+            <div onclick="showProject({{this.id}})">
+                <img alt={{this.name}} src={{this.image}} class="img-fluid">
+            </div>
+
+            <div id={{this.id}} class="modal">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close" onclick="closeProject({{this.id}})">&times;</span>
+                        <h2>{{this.name}}</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{this.description}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="/" class="btn bg-primary">Demo</a>
+                        <a href="/" class="btn bg-secondary">Code</a>
+                    </div>
+                </div>
+
+            </div>
+        {{/each}}
+    </div>
+</div>
+<script src="/js/index.js" defer></script>
+<script>
+    function showProject(name){
+        console.log("okey")
+        const modal = document.getElementById(name);
+        modal.style.display = "block"
+    }
+
+    function closeProject(name){
+        const modal = document.getElementById(name);
+        modal.style.display = "none";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melaine Gérard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="main">
+<header>
+    {{>_nav}}
+</header>
+<div class="content m-4 bg-transparent-gray">
+    <h1 class="mb-4">{{stage.enterprise}}</h1>
+    <p>
+        {{stage.description}}
+    </p>
+    <h2 class="mt-2">
+        Compte rendu de stage
+    </h2>
+    {{#each compte_rendus}}
+        <div class="mt-2 mb-4 cr">
+            <h2 class="text-center mb-2">{{this.name}}</h2>
+            {{{mdToHtml this.content}}}
+        </div>
+    {{/each}}
+</div>
+<script src="/js/index.js" defer></script>
+</body>
+</html>

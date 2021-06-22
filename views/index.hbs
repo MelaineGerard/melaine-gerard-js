@@ -10,20 +10,12 @@
 </head>
 <body class="main">
 <header>
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Compétences</a></li>
-            <li><a href="#">Stages</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    {{>_nav}}
 </header>
 <div class="content">
-    <img src="/images/moi.png" alt="">
-    <p class="bold">Melaine Gérard</p>
-    <p class="light">Développeur</p>
+    <img src="/images/moi.png" alt="Melaine Gérard" class="me">
+    <p class="bold rank">Melaine Gérard</p>
+    <p class="light rank">Développeur</p>
     <div class="socials">
         <ul class="social-list">
             <li><a href="https://github.com/MelaineGerard"><i class="fab fa-github"></i></a></li>
