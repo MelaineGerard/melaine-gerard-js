@@ -6,5 +6,6 @@ services:
       context: ./
       dockerfile: ./docker/DockerFile
     ports:
-      - "8009:80"
-    working_dir: /var/www/dist
+      - "8009:3000"
+    volumes:
+    - "./:/app"
